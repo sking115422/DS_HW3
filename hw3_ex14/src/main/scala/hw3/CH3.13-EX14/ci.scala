@@ -50,7 +50,7 @@ def confidenceIntervalTest (s_size:Int): Unit =
     if mu in ci_z then count_z += 1
 
     val ihw_t = t_sigma (sig_, m-1) / rm // interval half width: t-distribution
-    val ci_t = (mu_ - ihw_t, mu_ + ihw_t) // z-confidence interval
+    val ci_t = (mu_ - ihw_t, mu_ + ihw_t) // t-confidence interval
     println (s"mu = $mu in ci_t = $ci_t?")
 
     if mu in ci_t then count_t += 1
